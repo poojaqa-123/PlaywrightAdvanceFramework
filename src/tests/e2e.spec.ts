@@ -1,10 +1,14 @@
 import { test, expect } from '@fixtures/test-base';
+import dotenv from 'dotenv';
+import userData from '../testdata/user-data.json';
 
-const TEST_USER = 'standard_user';
-const TEST_PASSWORD = 'tta_secret';
-const FIRST_NAME = 'Neha';
-const LAST_NAME = 'Kute';
-const POSTAL_CODE = '444505';
+dotenv.config();
+
+const TEST_USER = process.env.TEST_USER || 'standard_user';
+const TEST_PASSWORD = process.env.TEST_PASSWORD || 'tta_secret';
+const FIRST_NAME = userData.standardUser.firstName;
+const LAST_NAME = userData.standardUser.lastName;
+const POSTAL_CODE = userData.standardUser.postalCode;
 
 test('E2E checkout flow for standard user', async ({
   loginPage,
