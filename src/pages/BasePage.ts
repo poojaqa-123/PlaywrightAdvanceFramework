@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
 import { UtilElementLocator } from '@utils/UtilElementLocator';
-import { createLogger, type Logger } from '@utils/logger';
+import { createLogger, type Logger } from '@utils/Logger';
 
 /**
  * BasePage - shared scaffolding for every TTACart Page Object.

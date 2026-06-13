@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { createLogger } from '@utils/Logger';
 import { BasePage } from './BasePage';
 
 
@@ -33,4 +32,6 @@ async loginAs(username: string, password: string) {
     await this.el.fill(this.passwordInput, password);
     await this.el.click(this.loginButton);
 }
+
+
 }

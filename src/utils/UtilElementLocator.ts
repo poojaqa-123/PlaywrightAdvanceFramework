@@ -97,7 +97,7 @@ export class UtilElementLocator {
         return (await locator.innerText({ timeout })).trim();
     }
 
-    async getAllTexts(target: Flex, timeout: number = DEFAULT_ACTION_TIMEOUT_MS) : Promise<string[]> {
+    async getAllTexts(target: Flex) : Promise<string[]> {
         const locator = this.toLocator(target);
         const texts = await locator.allTextContents();
         return texts.map((t) => t.trim());
